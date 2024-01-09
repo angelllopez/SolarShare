@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarShare", "UtiliSense.Solar\SolarShare.csproj", "{84F57E27-43E5-4EFD-8279-5BFDA119BB39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarShare.Api", "UtiliSense.Solar\SolarShare.Api.csproj", "{84F57E27-43E5-4EFD-8279-5BFDA119BB39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{9658FF3E-6EF8-4D64-A33E-3BB2154FE246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{066125C7-7D9B-4277-A32E-49CE569A0B14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{47562F86-A170-4081-A9DF-600BDED1CF01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarShare.Data", "SolarShare.Data\SolarShare.Data.csproj", "{29E04BA5-3E2F-4812-A18C-8486B88B65D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,16 @@ Global
 		{84F57E27-43E5-4EFD-8279-5BFDA119BB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84F57E27-43E5-4EFD-8279-5BFDA119BB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84F57E27-43E5-4EFD-8279-5BFDA119BB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E04BA5-3E2F-4812-A18C-8486B88B65D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E04BA5-3E2F-4812-A18C-8486B88B65D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E04BA5-3E2F-4812-A18C-8486B88B65D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E04BA5-3E2F-4812-A18C-8486B88B65D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29E04BA5-3E2F-4812-A18C-8486B88B65D8} = {066125C7-7D9B-4277-A32E-49CE569A0B14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {226F4FF2-B379-4D0D-94D2-6CAA0A2586F4}
