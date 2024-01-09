@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SolarShare.Data.Contracts;
 
 namespace SolarShare.Api.Controllers
 {
@@ -6,7 +7,7 @@ namespace SolarShare.Api.Controllers
     [ApiController]
     public class SolarDataController : ControllerBase
     {
-        private readonly SolarDataRepository _repo;
+        private readonly IRepository _repo;
 
 
         /// <summary>
@@ -15,7 +16,7 @@ namespace SolarShare.Api.Controllers
         /// <param name="SolarDataRepository">
         /// A SolarDataRepository type that represents the dependency injected.
         /// </param>
-        public SolarDataController(SolarDataRepository repository)
+        public SolarDataController(IRepository repository)
         {
             _repo = repository;
         }
@@ -60,9 +61,9 @@ namespace SolarShare.Api.Controllers
         [HttpGet("{date}")]
         [Route("GetSolarDataByDate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetSolarDataByDayAsync(DateTime date)
+        public async Task<IActionResult> GetSolarDataByDay(DateTime date)
         {
-            var data = await _repo.GetProductionDataByDay(date);
+            var data = await _repo.GetSolarDataByDateAsync(date);
 
             return data.Id < 1 ? NotFound() : Ok(data);
         }
@@ -83,9 +84,9 @@ namespace SolarShare.Api.Controllers
         [HttpGet]
         [Route("GetProductionDataByMonth")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetProductionDataByMonthAsync(DateTime date)
+        public async Task<IActionResult> GetProductionDataByMonth(DateTime date)
         {
-            var data = await _repo.GetProductionDataByMonth(date);
+            var data = await _repo.GetSolarDataByMonthAsync(date);
 
             return !data.Any() ? NotFound() : Ok(data);
         }
@@ -105,9 +106,9 @@ namespace SolarShare.Api.Controllers
         [HttpGet]
         [Route("GetProductionDataByYear")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetProductionDataByYearAsync(DateTime date)
+        public async Task<IActionResult> GetSolarDataByYear(DateTime date)
         {
-            var data = await _repo.GetProductionDataByYear(date);
+            var data = await _repo.GetSolarDataByYearAsync(date);
 
             return !data.Any() ? NotFound() : Ok(data);
         }
