@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtiliSense.Solar", "UtiliSense.Solar\UtiliSense.Solar.csproj", "{84F57E27-43E5-4EFD-8279-5BFDA119BB39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarShare", "UtiliSense.Solar\SolarShare.csproj", "{84F57E27-43E5-4EFD-8279-5BFDA119BB39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
